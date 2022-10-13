@@ -12,3 +12,4 @@ jobs:
         with:
           script: |
             console.log('Hello world');
+            console.log(`${{{ github.event }}}`)
