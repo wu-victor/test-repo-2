@@ -23,7 +23,7 @@ const token = core.getInput('token');
     headers: { Authorization: `Bearer ${token}` },
     url: 'https://api.github.com/repos/wu-victor/test-repo-2/pulls/1/comments',
     data: {
-      body: "This is a comment!"
+      'body': 'This is a comment!'
     }
   });
   const { data } = response;
