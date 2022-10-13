@@ -1,5 +1,5 @@
-const core = require('@actions/core');
-const github = require('@actions/github');
+const core = require("@actions/core");
+const github = require("@actions/github");
 
 const category = core.getInput('category') || 'inspire';
 const readme_path = core.getInput('readme_path') || 'README.md';
