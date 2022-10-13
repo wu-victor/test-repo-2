@@ -15,3 +15,14 @@ const { commits } = payload;
 console.log({ pulls_url, commits, payload });
 
 const token = core.getInput('token');
+
+
+(async () => {  
+  const response = await axios({
+    method: 'GET',
+    headers: { Authorization: `Bearer ${token}` },
+    url: 'https://api.github.com/repos/wu-victor/test-repo-2/pulls/1',
+  });
+  const { data } = response;
+  console.log({ data })
+})();
