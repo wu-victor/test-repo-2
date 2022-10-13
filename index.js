@@ -19,9 +19,12 @@ const token = core.getInput('token');
 
 (async () => {  
   const response = await axios({
-    method: 'GET',
+    method: 'POST',
     headers: { Authorization: `Bearer ${token}` },
-    url: 'https://api.github.com/repos/wu-victor/test-repo-2/pulls/1',
+    url: 'https://api.github.com/repos/wu-victor/test-repo-2/pulls/1/comments',
+    data: {
+      body: "This is a comment!"
+    }
   });
   const { data } = response;
   console.log({ data })
