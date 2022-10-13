@@ -1,16 +1,27 @@
-name: Add pull request comment on push
-
+name: Update README with QOTD
 on:
   push
-  
+
 jobs:
-  pr_comment:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "Event is ${{ github.event }}"
-      - name: Add comment
-        uses: satackey/action-js-inline@v0.0.2
-        with:
-          script: |
-            console.log('Hello world');
+    - name: Check out repo
+      uses: actions/checkout@v2
+    - name: Use Node
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14.x'
+    - name: Install node dependencies
+      run: npm install
+    - name: Run QOTD action
+      uses: ./ # Uses an action in the root directory
+      with:
+         category: 'life'
+    - name: Commit and push update
+      run: |-
+        git config --global user.email "qotd@action.com"
+        git config --global user.name "Quote-Bot"
+        git add -A
+        git commit -m "Added QOTD from GitHub Actions"
+        git push
