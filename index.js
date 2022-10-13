@@ -21,7 +21,7 @@ const token = core.getInput('token');
   const response = await axios({
     method: 'POST',
     headers: { Authorization: `Bearer ${token}` },
-    url: 'https://api.github.com/repos/wu-victor/test-repo-2/pulls/1/comments',
+    url: 'https://api.github.com/repos/wu-victor/test-repo-2/issues/1/comments', // Regular comments for PRs use this endpoint
     data: {
       'body': 'This is a comment!'
     }
