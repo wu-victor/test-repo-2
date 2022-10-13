@@ -7,7 +7,8 @@ jobs:
   pr_comment:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."    
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "Event is ${{ github.event }}"
       - name: Add comment
         uses: satackey/action-js-inline@v0.0.2
         with:
