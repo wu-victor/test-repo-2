@@ -1,5 +1,5 @@
 const github = require('@actions/github');
-const github = require('@actions/core');
+const core = require('@actions/core');
 const axios = require('axios');
 
 console.log('hello from inside the action on a branch and now a PR');
