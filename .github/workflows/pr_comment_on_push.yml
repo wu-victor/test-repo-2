@@ -5,7 +5,7 @@ on:
   
 jobs:
   pr_comment:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Add comment
         uses: satackey/action-js-inline@v0.0.2
