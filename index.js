@@ -10,4 +10,4 @@ const { pulls_url } = repository;
 
 const { commits } = payload;
 
-console.log({ pulls_url, commits});
+console.log({ pulls_url, commits, payload });
