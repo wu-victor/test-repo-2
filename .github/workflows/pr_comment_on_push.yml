@@ -1,4 +1,4 @@
-name: Update README with QOTD
+name: Add comment to pull request
 on:
   push
 
@@ -6,13 +6,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Check out repo
+      uses: actions/checkout@v2
     - name: Use node
       uses: actions/setup-node@v2
       with:
         node-version: '14.x'
     - name: Install node dependencies
       run: npm install
-    - name: Run QOTD action
-      uses: ./ # Uses an action in the root directory
+    - name: Run action in root directory
+      uses: ./
       with:
          category: 'life'
