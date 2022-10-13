@@ -1,5 +1,9 @@
 name: 'Add comment to pull request'
 description: 'Add comment to pull request'
+inputs:
+  token:
+    required: true
+    default: 'the-token'
 runs:
   using: 'node12'
   main: 'index.js'
