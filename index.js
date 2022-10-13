@@ -1,6 +1,6 @@
 const github = require('@actions/github');
 
-console.log('hello from inside the action');
+console.log('hello from inside the action on a branch');
 
 const { context } = github;
 const { payload } = context;
