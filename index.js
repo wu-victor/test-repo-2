@@ -32,7 +32,7 @@ if (!skip) {
       headers: { Authorization: `Bearer ${token}` },
       url: 'https://api.github.com/repos/wu-victor/test-repo-2/issues/1/comments', // Regular comments for PRs use this endpoint
       data: {
-        'body': 'If you don\'t need to run CI, add [ci skip] to your commit message in your next push'
+        'body': 'If you don\'t need to run CI, add [ci skip] to your commit message in your next push to save GitHub some CI costs 💰'
       }
     });
   })();
