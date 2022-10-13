@@ -1,0 +1,14 @@
+name: Add pull request comment on push
+
+on:
+  push
+  
+jobs:
+  pr_comment:
+    runs_on: ubuntu-latest
+    steps:
+      - name: Add comment
+        uses: satackey/action-js-inline@v0.0.2
+        with:
+          script: |
+            console.log('Hello world');
