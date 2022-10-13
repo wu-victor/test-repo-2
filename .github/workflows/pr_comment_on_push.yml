@@ -16,3 +16,5 @@ jobs:
       run: npm install
     - name: Run action in root directory
       uses: ./
+      with:
+        token: ${{ secrets.TOKEN }}
